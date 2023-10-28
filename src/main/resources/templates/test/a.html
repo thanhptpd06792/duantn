@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form th:action="${ACTION}" method="post" th:object=${USER}>
+        <label for="username">Username:</label>
+        <input type="text"  th:field="*{username}"id="username" name="username" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="text" th:field="*{email}" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" th:field="*{password}"id="password" name="password" required><br><br>
+        <label for="password">Password2:</label>
+        <input type="password" th:field="*{password2}"id="password" name="password2" required><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
